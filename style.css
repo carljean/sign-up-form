@@ -1,0 +1,187 @@
+@font-face {
+    font-family: 'Norse_Bold';
+    src: url('./font/Norse-Bold.otf');
+}
+
+:root {
+    --black-bg-transparent-color: rgba(0, 0, 0, 0.55);
+    --white-color: white;
+    --right-part-bgcolor: white;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    /* border: 5px solid lightgreen; */
+    flex-grow: 1;
+    display: flex;
+}
+
+
+.left-part {
+    /* border: 3px solid lightsalmon; */
+    flex-grow: 1;
+    background-image: url('./img/halie-west-25xggax4bSA-unsplash.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.right-part {
+    /* border: 3px solid lightsalmon; */
+    flex-basis: 65%;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--right-part-bgcolor);
+}
+
+#logo > img {
+    width: 6.5rem;
+}
+
+#logo > p {
+    color: var(--white-color);
+    text-transform: uppercase;
+    font-family: 'Norse_Bold', sans-serif;
+    font-size: 62px;
+}
+
+#logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 25%;
+    /* border: 2px solid red; */
+    width: 100%;
+    background-color: var(--black-bg-transparent-color);
+    padding: 8px 0;
+}
+
+#credit, #credit > a {
+    color: var(--white-color);
+}
+
+#credit {
+    bottom: 0;
+    position: absolute;
+    /* border: 1px solid yellow; */
+}
+
+.upper-content > p {
+    font-weight: 600;
+    /* border: 6px solid black; */
+    width: 80%; 
+    margin-left: 32px;
+    font-size: 24px;
+}
+
+.upper-content, .form-section, .lower-section {
+    /* border: 2px solid lightblue; */
+    flex-grow: 1;
+}
+
+.upper-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 32px;
+    padding-top: 64px;
+}
+
+.form-section {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.info-container {
+    display: flex;
+    gap: 64px;
+}
+
+.form-left-part > div > label, .form-right-part > div > label {
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 12px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    color: black;
+}
+
+.form-left-part > div > label + input, .form-right-part > div > label + input {
+    /* padding: 5px 32px; */
+    border:1px solid #E5E7EB;
+    font-size: 24px;
+    border-radius: 5px;
+}
+
+.form-left-part, .form-right-part {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.info-container {
+    padding-left: 32px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    margin-bottom: 48px;
+
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.0);
+}
+
+h2 {
+    margin-left: 32px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    /* border: 3px solid black; */
+}
+
+form {
+    margin-bottom: 32px;
+}
+
+form + p {
+    margin-left: 32px;
+}
+
+button {
+    margin-left: 32px;
+    background-color: #596D48;
+    color: white;
+    padding: 8px 32px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    border: 1px solid #596D48;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+form + p > a {
+    text-decoration: none;
+    font-weight: 800;
+    font-family: 'Roboto', sans-serif;
+    color: #596D48;
+}
+
+[type*="password"]:invalid {
+    border: 1px solid red;
+}
+
+input:focus {
+    border: 1px solid blue;
+}
